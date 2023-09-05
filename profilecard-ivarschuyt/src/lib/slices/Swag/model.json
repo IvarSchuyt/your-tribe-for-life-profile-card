@@ -1,0 +1,33 @@
+{
+  "id": "swag",
+  "type": "SharedSlice",
+  "name": "Swag",
+  "description": "Swag",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "imagetest": {
+          "type": "Image",
+          "config": {
+            "label": "imagetest",
+            "constraint": {},
+            "thumbnails": [
+              {
+                "name": "test",
+                "width": 3000,
+                "height": 3000
+              }
+            ]
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

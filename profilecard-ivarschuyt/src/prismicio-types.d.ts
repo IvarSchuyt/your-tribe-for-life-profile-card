@@ -30,7 +30,7 @@ interface PageDocumentData {
 	 * - **Tab**: Main
 	 * - **Documentation**: https://prismic.io/docs/field#slices
 	 */
-	slices: prismic.SliceZone<PageDocumentDataSlicesSlice>;
+	slices: prismic.SliceZone<PageDocumentDataSlicesSlice>
 	/**
 	 * Meta Title field in *Page*
 	 *
@@ -39,7 +39,7 @@ interface PageDocumentData {
 	 * - **API ID Path**: page.meta_title
 	 * - **Tab**: SEO & Metadata
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
+	 */;
 	meta_title: prismic.KeyTextField;
 
 	/**
@@ -124,6 +124,48 @@ type RichTextSliceVariation = RichTextSliceDefault;
  */
 export type RichTextSlice = prismic.SharedSlice<'rich_text', RichTextSliceVariation>;
 
+/**
+ * Primary content in *Swag → Primary*
+ */
+export interface SwagSliceDefaultPrimary {
+	/**
+	 * imagetest field in *Swag → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: swag.primary.imagetest
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	imagetest: prismic.ImageField<'test'>;
+}
+
+/**
+ * Default variation for Swag Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SwagSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<SwagSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *Swag*
+ */
+type SwagSliceVariation = SwagSliceDefault;
+
+/**
+ * Swag Shared Slice
+ *
+ * - **API ID**: `swag`
+ * - **Description**: Swag
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SwagSlice = prismic.SharedSlice<'swag', SwagSliceVariation>;
+
 declare module '@prismicio/client' {
 	interface CreateClient {
 		(
@@ -141,7 +183,11 @@ declare module '@prismicio/client' {
 			RichTextSlice,
 			RichTextSliceDefaultPrimary,
 			RichTextSliceVariation,
-			RichTextSliceDefault
+			RichTextSliceDefault,
+			SwagSlice,
+			SwagSliceDefaultPrimary,
+			SwagSliceVariation,
+			SwagSliceDefault
 		};
 	}
 }
