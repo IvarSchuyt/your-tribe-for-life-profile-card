@@ -1,5 +1,5 @@
 <script>
-	/** @type {import("@prismicio/client").Content.SwagSlice} */
+	/** @type {import("@prismicio/client").Content.LinksSlice} */
 	export let slice;
 </script>
 

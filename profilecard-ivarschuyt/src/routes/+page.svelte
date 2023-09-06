@@ -5,6 +5,9 @@
 
 	/** @type {import('./$types').PageData} */
 	export let data;
+	console.log(data)
 </script>
 
 <SliceZone slices={data.page.data.slices} {components} />
+<h1>{data.title}</h1>
+<img src="{data.meta_image}" alt="sada">

@@ -4,7 +4,51 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = RichTextSlice;
+type ImagetestDocumentDataSlicesSlice = ImageTestSlice;
+
+/**
+ * Content for ImageTest documents
+ */
+interface ImagetestDocumentData {
+	/**
+	 * TEsttest field in *ImageTest*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: imagetest.testtest
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	testtest: prismic.ImageField<never>;
+
+	/**
+	 * Slice Zone field in *ImageTest*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: imagetest.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<ImagetestDocumentDataSlicesSlice>;
+}
+
+/**
+ * ImageTest document from Prismic
+ *
+ * - **API ID**: `imagetest`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ImagetestDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<
+	Simplify<ImagetestDocumentData>,
+	'imagetest',
+	Lang
+>;
+
+type PageDocumentDataSlicesSlice = RichTextSlice | LinksSlice | ImageTestSlice;
 
 /**
  * Content for Page documents
@@ -80,7 +124,76 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 	Lang
 >;
 
-export type AllDocumentTypes = PageDocument;
+export type AllDocumentTypes = ImagetestDocument | PageDocument;
+
+/**
+ * Primary content in *ImageTest → Primary*
+ */
+export interface ImageTestSliceDefaultPrimary {
+	/**
+	 * TestImage field in *ImageTest → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_test.primary.testimage
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	testimage: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for ImageTest Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageTestSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<ImageTestSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *ImageTest*
+ */
+type ImageTestSliceVariation = ImageTestSliceDefault;
+
+/**
+ * ImageTest Shared Slice
+ *
+ * - **API ID**: `image_test`
+ * - **Description**: ImageTest
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageTestSlice = prismic.SharedSlice<'image_test', ImageTestSliceVariation>;
+
+/**
+ * Default variation for Links Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LinksSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Record<string, never>,
+	never
+>;
+
+/**
+ * Slice variation for *Links*
+ */
+type LinksSliceVariation = LinksSliceDefault;
+
+/**
+ * Links Shared Slice
+ *
+ * - **API ID**: `links`
+ * - **Description**: Links
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LinksSlice = prismic.SharedSlice<'links', LinksSliceVariation>;
 
 /**
  * Primary content in *RichText → Primary*
@@ -124,48 +237,6 @@ type RichTextSliceVariation = RichTextSliceDefault;
  */
 export type RichTextSlice = prismic.SharedSlice<'rich_text', RichTextSliceVariation>;
 
-/**
- * Primary content in *Swag → Primary*
- */
-export interface SwagSliceDefaultPrimary {
-	/**
-	 * imagetest field in *Swag → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: swag.primary.imagetest
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	imagetest: prismic.ImageField<'test'>;
-}
-
-/**
- * Default variation for Swag Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SwagSliceDefault = prismic.SharedSliceVariation<
-	'default',
-	Simplify<SwagSliceDefaultPrimary>,
-	never
->;
-
-/**
- * Slice variation for *Swag*
- */
-type SwagSliceVariation = SwagSliceDefault;
-
-/**
- * Swag Shared Slice
- *
- * - **API ID**: `swag`
- * - **Description**: Swag
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SwagSlice = prismic.SharedSlice<'swag', SwagSliceVariation>;
-
 declare module '@prismicio/client' {
 	interface CreateClient {
 		(
@@ -176,18 +247,24 @@ declare module '@prismicio/client' {
 
 	namespace Content {
 		export type {
+			ImagetestDocument,
+			ImagetestDocumentData,
+			ImagetestDocumentDataSlicesSlice,
 			PageDocument,
 			PageDocumentData,
 			PageDocumentDataSlicesSlice,
 			AllDocumentTypes,
+			ImageTestSlice,
+			ImageTestSliceDefaultPrimary,
+			ImageTestSliceVariation,
+			ImageTestSliceDefault,
+			LinksSlice,
+			LinksSliceVariation,
+			LinksSliceDefault,
 			RichTextSlice,
 			RichTextSliceDefaultPrimary,
 			RichTextSliceVariation,
-			RichTextSliceDefault,
-			SwagSlice,
-			SwagSliceDefaultPrimary,
-			SwagSliceVariation,
-			SwagSliceDefault
+			RichTextSliceDefault
 		};
 	}
 }

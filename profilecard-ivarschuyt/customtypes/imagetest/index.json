@@ -1,0 +1,30 @@
+{
+	"id": "imagetest",
+	"label": "ImageTest",
+	"format": "custom",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"testtest": {
+				"type": "Image",
+				"config": {
+					"label": "TEsttest",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"slices": {
+				"type": "Slices",
+				"fieldset": "Slice Zone",
+				"config": {
+					"choices": {
+						"image_test": {
+							"type": "SharedSlice"
+						}
+					}
+				}
+			}
+		}
+	}
+}
