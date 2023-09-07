@@ -58,10 +58,18 @@
 			"meta_image": {
 				"type": "Image",
 				"config": {
-					"label": "Meta Image",
+					"label": "meta image",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"profilepicture": {
+				"type": "Image",
+				"config": {
+					"label": "profilepicture",
 					"constraint": {
-						"width": 2400,
-						"height": 1260
+						"width": 500,
+						"height": 500
 					},
 					"thumbnails": []
 				}

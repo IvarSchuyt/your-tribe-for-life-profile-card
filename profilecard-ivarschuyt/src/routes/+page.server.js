@@ -15,6 +15,7 @@ export async function load() {
 		title: asText(page.data.title),
 		meta_description: page.data.meta_description,
 		meta_title: page.data.meta_title,
-		meta_image: page.data.meta_image.url
+		meta_image: page.data.meta_image.url,
+		profilepicture: page.data.profilepicture.url
 	};
 }

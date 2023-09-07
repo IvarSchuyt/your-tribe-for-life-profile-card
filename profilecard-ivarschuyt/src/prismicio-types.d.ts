@@ -98,7 +98,7 @@ interface PageDocumentData {
 	meta_description: prismic.KeyTextField;
 
 	/**
-	 * Meta Image field in *Page*
+	 * meta image field in *Page*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
@@ -107,6 +107,17 @@ interface PageDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	meta_image: prismic.ImageField<never>;
+
+	/**
+	 * profilepicture field in *Page*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: page.profilepicture
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	profilepicture: prismic.ImageField<never>;
 }
 
 /**
