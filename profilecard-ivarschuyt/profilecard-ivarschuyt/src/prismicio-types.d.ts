@@ -30,7 +30,7 @@ interface PageDocumentData {
 	 * - **Tab**: Main
 	 * - **Documentation**: https://prismic.io/docs/field#slices
 	 */
-	slices: prismic.SliceZone<PageDocumentDataSlicesSlice>;
+	slices: prismic.SliceZone<PageDocumentDataSlicesSlice>
 	/**
 	 * Meta Title field in *Page*
 	 *
@@ -39,7 +39,7 @@ interface PageDocumentData {
 	 * - **API ID Path**: page.meta_title
 	 * - **Tab**: SEO & Metadata
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
+	 */;
 	meta_title: prismic.KeyTextField;
 
 	/**
@@ -87,14 +87,64 @@ export type AllDocumentTypes = PageDocument;
  */
 export interface RichTextSliceDefaultPrimary {
 	/**
-	 * Content field in *RichText → Primary*
+	 * name field in *RichText → Primary*
 	 *
 	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: Lorem ipsum...
+	 * - **API ID Path**: rich_text.primary.name
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	name: prismic.RichTextField;
+
+	/**
+	 * content field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
 	 * - **API ID Path**: rich_text.primary.content
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	content: prismic.RichTextField;
+
+	/**
+	 * profilepicture field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.profilepicture
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	profilepicture: prismic.ImageField<never>;
+
+	/**
+	 * linkgithub field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.LinkGithub
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	LinkGithub: prismic.LinkField;
+
+	/**
+	 * linkinstagram field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.LinkInstagram
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	LinkInstagram: prismic.LinkField;
+
+	/**
+	 * linkemail field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.LinkEmail
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	LinkEmail: prismic.LinkField;
 }
 
 /**

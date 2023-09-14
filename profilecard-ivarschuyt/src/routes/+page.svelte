@@ -9,5 +9,4 @@
 </script>
 
 <SliceZone slices={data.page.data.slices} {components} />
-<h1>{data.title}</h1>
-<img src="{data.profilepicture}" alt="profielfoto">
+

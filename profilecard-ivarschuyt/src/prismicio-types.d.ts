@@ -4,7 +4,7 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type ImagetestDocumentDataSlicesSlice = ImageTestSlice;
+type ImagetestDocumentDataSlicesSlice = never;
 
 /**
  * Content for ImageTest documents
@@ -48,7 +48,7 @@ export type ImagetestDocument<Lang extends string = string> = prismic.PrismicDoc
 	Lang
 >;
 
-type PageDocumentDataSlicesSlice = RichTextSlice | LinksSlice | ImageTestSlice;
+type PageDocumentDataSlicesSlice = RichTextSlice;
 
 /**
  * Content for Page documents
@@ -138,78 +138,19 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 export type AllDocumentTypes = ImagetestDocument | PageDocument;
 
 /**
- * Primary content in *ImageTest → Primary*
- */
-export interface ImageTestSliceDefaultPrimary {
-	/**
-	 * TestImage field in *ImageTest → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_test.primary.testimage
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	testimage: prismic.ImageField<never>;
-}
-
-/**
- * Default variation for ImageTest Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type ImageTestSliceDefault = prismic.SharedSliceVariation<
-	'default',
-	Simplify<ImageTestSliceDefaultPrimary>,
-	never
->;
-
-/**
- * Slice variation for *ImageTest*
- */
-type ImageTestSliceVariation = ImageTestSliceDefault;
-
-/**
- * ImageTest Shared Slice
- *
- * - **API ID**: `image_test`
- * - **Description**: ImageTest
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type ImageTestSlice = prismic.SharedSlice<'image_test', ImageTestSliceVariation>;
-
-/**
- * Default variation for Links Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type LinksSliceDefault = prismic.SharedSliceVariation<
-	'default',
-	Record<string, never>,
-	never
->;
-
-/**
- * Slice variation for *Links*
- */
-type LinksSliceVariation = LinksSliceDefault;
-
-/**
- * Links Shared Slice
- *
- * - **API ID**: `links`
- * - **Description**: Links
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type LinksSlice = prismic.SharedSlice<'links', LinksSliceVariation>;
-
-/**
  * Primary content in *RichText → Primary*
  */
 export interface RichTextSliceDefaultPrimary {
+	/**
+	 * name field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.name
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	name: prismic.RichTextField;
+
 	/**
 	 * Content field in *RichText → Primary*
 	 *
@@ -219,6 +160,46 @@ export interface RichTextSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	content: prismic.RichTextField;
+
+	/**
+	 * profilepicture field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.profilepicture
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	profilepicture: prismic.ImageField<never>;
+
+	/**
+	 * linkgithub field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.LinkGithub
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	LinkGithub: prismic.LinkField;
+
+	/**
+	 * linkinstagram field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.LinkInstagram
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	LinkInstagram: prismic.LinkField;
+
+	/**
+	 * linkemail field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.LinkEmail
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	LinkEmail: prismic.LinkField;
 }
 
 /**
@@ -265,13 +246,6 @@ declare module '@prismicio/client' {
 			PageDocumentData,
 			PageDocumentDataSlicesSlice,
 			AllDocumentTypes,
-			ImageTestSlice,
-			ImageTestSliceDefaultPrimary,
-			ImageTestSliceVariation,
-			ImageTestSliceDefault,
-			LinksSlice,
-			LinksSliceVariation,
-			LinksSliceDefault,
 			RichTextSlice,
 			RichTextSliceDefaultPrimary,
 			RichTextSliceVariation,
