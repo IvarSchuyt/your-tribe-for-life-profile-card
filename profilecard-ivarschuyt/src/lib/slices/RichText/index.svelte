@@ -8,21 +8,28 @@
 	export let slice;
 </script>
 
-<section class="name">
-	<PrismicRichText field={slice.primary.name} />
-</section>
 
 <section class="content">
 	<PrismicRichText
-		field={slice.primary.content}
-		components={{
-			label: Label
-		}}
+	field={slice.primary.content}
+	components={{
+		label: Label
+	}}
 	/>
 </section>
 
 <section class="profilepicture">
 	<PrismicImage field={slice.primary.profilepicture} />
+</section>
+
+<section class="name">
+	<PrismicRichText field={slice.primary.name} />
+</section>
+
+<section class="skills">
+	{slice.primary.skill1}
+	{slice.primary.skill2}
+	{slice.primary.skill3}
 </section>
 
 <section class="links">

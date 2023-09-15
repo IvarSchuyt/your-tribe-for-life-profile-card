@@ -11,25 +11,13 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "RichText",
       "primary": {
-        "name": {
-          "type": "StructuredText",
-          "config": {
-            "label": "name",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
         "content": {
           "type": "StructuredText",
           "config": {
-            "label": "Content",
-            "placeholder": "Lorem ipsum...",
+            "label": "content",
+            "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,strong,em,hyperlink,embed,list-item",
-            "labels": [
-              "codespan"
-            ]
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
         "profilepicture": {
@@ -38,6 +26,39 @@
             "label": "profilepicture",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "name": {
+          "type": "StructuredText",
+          "config": {
+            "label": "name",
+            "placeholder": "Lorem ipsum...",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,strong,em,hyperlink,embed,list-item",
+            "labels": [
+              "codespan"
+            ]
+          }
+        },
+        "skill1": {
+          "type": "Text",
+          "config": {
+            "label": "skill1",
+            "placeholder": ""
+          }
+        },
+        "skill2": {
+          "type": "Text",
+          "config": {
+            "label": "skill2",
+            "placeholder": ""
+          }
+        },
+        "skill3": {
+          "type": "Text",
+          "config": {
+            "label": "skill3",
+            "placeholder": ""
           }
         },
         "LinkGithub": {

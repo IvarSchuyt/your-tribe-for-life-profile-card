@@ -142,20 +142,10 @@ export type AllDocumentTypes = ImagetestDocument | PageDocument;
  */
 export interface RichTextSliceDefaultPrimary {
 	/**
-	 * name field in *RichText → Primary*
+	 * content field in *RichText → Primary*
 	 *
 	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: rich_text.primary.name
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	name: prismic.RichTextField;
-
-	/**
-	 * Content field in *RichText → Primary*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: Lorem ipsum...
 	 * - **API ID Path**: rich_text.primary.content
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
@@ -170,6 +160,46 @@ export interface RichTextSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	profilepicture: prismic.ImageField<never>;
+
+	/**
+	 * name field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: Lorem ipsum...
+	 * - **API ID Path**: rich_text.primary.name
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	name: prismic.RichTextField;
+
+	/**
+	 * skill1 field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.skill1
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	skill1: prismic.KeyTextField;
+
+	/**
+	 * skill2 field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.skill2
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	skill2: prismic.KeyTextField;
+
+	/**
+	 * skill3 field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.skill3
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	skill3: prismic.KeyTextField;
 
 	/**
 	 * linkgithub field in *RichText → Primary*
