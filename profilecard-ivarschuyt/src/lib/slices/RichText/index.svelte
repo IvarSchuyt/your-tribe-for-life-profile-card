@@ -26,9 +26,9 @@
 </section>
 
 <section class="links">
-	<PrismicLink field={slice.primary.LinkGithub}>Link</PrismicLink>
-	<PrismicLink field={slice.primary.LinkInstagram}>Link</PrismicLink>
-	<PrismicLink field={slice.primary.LinkEmail}>Link</PrismicLink>
+	<PrismicLink field={slice.primary.LinkGithub}>Github</PrismicLink>
+	<PrismicLink field={slice.primary.LinkInstagram}>Instagram</PrismicLink>
+	<PrismicLink field={slice.primary.LinkEmail}>Email</PrismicLink>
 </section>
 
 
