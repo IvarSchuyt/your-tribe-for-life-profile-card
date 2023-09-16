@@ -8,6 +8,7 @@
 	export let slice;
 </script>
 
+<div class="card">
 
 <section class="content">
 	<PrismicRichText
@@ -27,21 +28,53 @@
 </section>
 
 <section class="skills">
-	{slice.primary.skill1}
-	{slice.primary.skill2}
-	{slice.primary.skill3}
+	<p class="skill">
+		{slice.primary.skill1}
+	</p>
+	<p class="skill">	
+		{slice.primary.skill2}
+	</p>
+	<p class="skill">
+		{slice.primary.skill3}
+	</p>
 </section>
 
 <section class="links">
-	<PrismicLink field={slice.primary.LinkGithub}>Github</PrismicLink>
-	<PrismicLink field={slice.primary.LinkInstagram}>Instagram</PrismicLink>
-	<PrismicLink field={slice.primary.LinkEmail}>Email</PrismicLink>
+		<PrismicLink field={slice.primary.LinkGithub}>Github</PrismicLink>
+		<PrismicLink field={slice.primary.LinkInstagram}>Instagram</PrismicLink>
+		<PrismicLink field={slice.primary.LinkEmail}>Ivar.schuyt@hva.nl</PrismicLink>
 </section>
+
+</div>
 
 
 <style>
 	* {
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
 			'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+		margin: 0;
+		color: white;
 	}
+
+	.card{
+		background: #1F1F1F;
+		width: 30rem;
+		display: flex;
+		flex-direction: column;
+		padding-top: 2rem;
+		border-radius: 1rem;
+	}
+
+	.profilepicture{
+		align-self: center;
+		border-radius: 1rem;
+		filter: grayscale(100%);
+	}
+
+	.skill{
+		background: #4C4C4C;
+		border-radius: 1rem;
+		padding: 0.5rem;
+	}
+
 </style>
