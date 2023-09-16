@@ -40,9 +40,15 @@
 </section>
 
 <section class="links">
-		<PrismicLink field={slice.primary.LinkGithub}>Github</PrismicLink>
-		<PrismicLink field={slice.primary.LinkInstagram}>Instagram</PrismicLink>
-		<PrismicLink field={slice.primary.LinkEmail}>Ivar.schuyt@hva.nl</PrismicLink>
+	<a href="https://github.com/IvarSchuyt" class="link-github" target="_blank">
+		<PrismicImage field={slice.primary.LogoGithub} />
+	</a>
+	<a href="https://www.instagram.com/prodbyishh" class="link-instagram" target="_blank">
+		<PrismicImage field={slice.primary.LogoInstagram} />
+	</a>	
+	<a href="mailto:ivar.schuyt@hva.nl" class="link-email" target="_blank">
+		<PrismicImage field={slice.primary.LogoEmail} />
+	</a>	
 </section>
 
 </div>
@@ -75,6 +81,14 @@
 		background: #4C4C4C;
 		border-radius: 1rem;
 		padding: 0.5rem;
+	}
+	
+	.link-github{
+		filter: invert(0.68);
+	}
+
+	.link-instagram, .link-email{
+		filter: invert(0.32);
 	}
 
 </style>

@@ -202,34 +202,34 @@ export interface RichTextSliceDefaultPrimary {
 	skill3: prismic.KeyTextField;
 
 	/**
-	 * linkgithub field in *RichText → Primary*
+	 * logogithub field in *RichText → Primary*
 	 *
-	 * - **Field Type**: Link
+	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: rich_text.primary.LinkGithub
-	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 * - **API ID Path**: rich_text.primary.LogoGithub
+	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
-	LinkGithub: prismic.LinkField;
+	LogoGithub: prismic.ImageField<never>;
 
 	/**
-	 * linkinstagram field in *RichText → Primary*
+	 * logoinstagram field in *RichText → Primary*
 	 *
-	 * - **Field Type**: Link
+	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: rich_text.primary.LinkInstagram
-	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 * - **API ID Path**: rich_text.primary.LogoInstagram
+	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
-	LinkInstagram: prismic.LinkField;
+	LogoInstagram: prismic.ImageField<never>;
 
 	/**
-	 * linkemail field in *RichText → Primary*
+	 * logoemail field in *RichText → Primary*
 	 *
-	 * - **Field Type**: Link
+	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: rich_text.primary.LinkEmail
-	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 * - **API ID Path**: rich_text.primary.LogoEmail
+	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
-	LinkEmail: prismic.LinkField;
+	LogoEmail: prismic.ImageField<never>;
 }
 
 /**

@@ -61,29 +61,28 @@
             "placeholder": ""
           }
         },
-        "LinkGithub": {
-          "type": "Link",
+        "LogoGithub": {
+          "type": "Image",
           "config": {
-            "label": "linkgithub",
-            "placeholder": "",
-            "allowTargetBlank": false,
-            "select": null
+            "label": "logogithub",
+            "constraint": {},
+            "thumbnails": []
           }
         },
-        "LinkInstagram": {
-          "type": "Link",
+        "LogoInstagram": {
+          "type": "Image",
           "config": {
-            "label": "linkinstagram",
-            "placeholder": "",
-            "select": null
+            "label": "logoinstagram",
+            "constraint": {},
+            "thumbnails": []
           }
         },
-        "LinkEmail": {
-          "type": "Link",
+        "LogoEmail": {
+          "type": "Image",
           "config": {
-            "label": "linkemail",
-            "placeholder": "",
-            "select": null
+            "label": "logoemail",
+            "constraint": {},
+            "thumbnails": []
           }
         }
       },
