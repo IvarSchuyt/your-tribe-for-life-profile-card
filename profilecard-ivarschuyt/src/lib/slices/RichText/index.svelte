@@ -78,20 +78,24 @@
 		width: 30rem;
 		display: flex;
 		flex-direction: column;
-		padding: 2rem 0;
+		padding: 2.5rem 0;
 		border-radius: 1rem;
 		margin: 0 auto;
-		margin-top: 4rem;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
 	}
 
 	.profilepicture{
 		align-self: center;
 		border-radius: 1rem;
-		filter: grayscale(100%);
 	}
 
 	.written-content{
-		margin: 0 2rem;
+		margin: 0 2.5rem;
+	}
+
+	.name{
+		margin: 0.5rem 0;
 	}
 
 	.skill{
@@ -99,6 +103,7 @@
 		border-radius: 1rem;
 		padding: 0.5rem 1rem;
 		display: inline-block;
+		margin: 0 0.15rem 0.5rem 0;
 	}
 
 	.location{
@@ -116,7 +121,13 @@
 	.links{
 		display: flex;
 		flex-direction: column;
-		width: 2rem;
+		width: 1rem;
+		margin-left: 23rem;
+		margin-top: -3.5rem;
+	}
+
+	.links a{
+		margin-bottom: 0.5rem;
 	}
 
 	.hire-me{
