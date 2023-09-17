@@ -61,6 +61,13 @@
             "placeholder": ""
           }
         },
+        "location": {
+          "type": "Text",
+          "config": {
+            "label": "Location",
+            "placeholder": ""
+          }
+        },
         "LogoGithub": {
           "type": "Image",
           "config": {

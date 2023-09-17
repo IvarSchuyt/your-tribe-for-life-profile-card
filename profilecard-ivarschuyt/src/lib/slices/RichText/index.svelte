@@ -23,8 +23,12 @@
 	<PrismicImage field={slice.primary.profilepicture} />
 </section>
 
+<div class="written-content">
+
 <section class="name">
-	<PrismicRichText field={slice.primary.name} />
+	<h1 class="h1-name">
+		<PrismicRichText field={slice.primary.name} />
+	</h1>
 </section>
 
 <section class="skills">
@@ -37,6 +41,10 @@
 	<p class="skill">
 		{slice.primary.skill3}
 	</p>
+</section>
+
+<section class="location">
+	{slice.primary.location}
 </section>
 
 <section class="links">
@@ -53,10 +61,13 @@
 
 </div>
 
+<a href="https://www.linkedin.com/in/ivar-schuyt-388a0a228" class="hire-me" target="_blank">Hire me</a>
+
+</div>
 
 <style>
 	* {
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+		font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS','Segoe UI', Roboto, Helvetica, Arial, sans-serif,
 			'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 		margin: 0;
 		color: white;
@@ -67,8 +78,10 @@
 		width: 30rem;
 		display: flex;
 		flex-direction: column;
-		padding-top: 2rem;
+		padding: 2rem 0;
 		border-radius: 1rem;
+		margin: 0 auto;
+		margin-top: 4rem;
 	}
 
 	.profilepicture{
@@ -77,10 +90,19 @@
 		filter: grayscale(100%);
 	}
 
+	.written-content{
+		margin: 0 2rem;
+	}
+
 	.skill{
 		background: #4C4C4C;
 		border-radius: 1rem;
-		padding: 0.5rem;
+		padding: 0.5rem 1rem;
+		display: inline-block;
+	}
+
+	.location{
+		color: #21b16e;
 	}
 	
 	.link-github{
@@ -89,6 +111,24 @@
 
 	.link-instagram, .link-email{
 		filter: invert(0.32);
+	}
+
+	.links{
+		display: flex;
+		flex-direction: column;
+		width: 2rem;
+	}
+
+	.hire-me{
+		text-decoration: none;
+		color: black;
+		padding: 1rem;
+		background: rgb(42,233,134);
+		background: linear-gradient(90deg, rgba(42,233,134,1) 0%, rgba(52,233,95,1) 100%);
+		border-radius: 2rem;
+		width: 10rem;
+		text-align: center;
+		align-self: center;
 	}
 
 </style>

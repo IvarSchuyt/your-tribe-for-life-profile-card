@@ -131,6 +131,11 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"location": {
+				"__TYPE__": "FieldContent",
+				"value": "wrong",
+				"type": "Text"
 			}
 		},
 		"items": [

@@ -202,6 +202,16 @@ export interface RichTextSliceDefaultPrimary {
 	skill3: prismic.KeyTextField;
 
 	/**
+	 * Location field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.location
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	location: prismic.KeyTextField;
+
+	/**
 	 * logogithub field in *RichText → Primary*
 	 *
 	 * - **Field Type**: Image
