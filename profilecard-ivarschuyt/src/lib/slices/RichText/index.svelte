@@ -142,4 +142,16 @@
 		align-self: center;
 	}
 
+	@media only screen and (max-width: 600px) {
+		.card{
+			background: #1F1F1F;
+			width: 30rem;
+			display: flex;
+			flex-direction: column;
+			padding: 2.5rem 0;
+			border-radius: 1rem;
+			margin: 0 auto;
+		}
+	}	
+
 </style>
