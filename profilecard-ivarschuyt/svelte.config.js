@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import adapter from "@sveltejs/adapter-vercel";
+=======
+import adapter from '@sveltejs/adapter-auto';
+>>>>>>> parent of 61a10a3 (adapter vercel)
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
