@@ -142,6 +142,10 @@
 		align-self: center;
 	}
 
+	body{
+		scale: 0.75;
+	}
+
 	@media only screen and (max-width: 600px) {
 		.card{
 			background: #1F1F1F;
