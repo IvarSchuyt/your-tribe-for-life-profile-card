@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import adapter from "@sveltejs/adapter-vercel";
+=======
+import adapter from '@sveltejs/adapter-auto';
+>>>>>>> parent of 61a10a3 (adapter vercel)
 =======
 import adapter from '@sveltejs/adapter-auto';
 >>>>>>> parent of 61a10a3 (adapter vercel)
