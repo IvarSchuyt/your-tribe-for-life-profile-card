@@ -1,3 +1,6 @@
+# Code in andere repository
+Ik heb tijdens deze sprint veel geworsteld met het live zetten van mijn code. Uiteindelijk lukte het, maar de werkende code staat nu in een andere repository. Om deze code te vinden kan je in deze repository kijken: https://github.com/IvarSchuyt/profilecard4.
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
